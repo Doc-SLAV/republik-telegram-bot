@@ -147,8 +147,8 @@ def start(update, context):
             buttons = InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="🎉 Add me to your group", url="https://t.me/{}?startgroup=new".format(context.bot.username))],
                 [InlineKeyboardButton(text="💭 Language", callback_data="main_setlang"), InlineKeyboardButton(text="⚙️ Connect Group", callback_data="main_connect")],
-                [InlineKeyboardButton(text="👥 Support Group", url="https://t.me/EmiliaOfficial"), InlineKeyboardButton(text="🔔 Update Channel", url="https://t.me/AyraBotNews")],
-                [InlineKeyboardButton(text="❓ Help", url="https://t.me/{}?start=help".format(context.bot.username)), InlineKeyboardButton(text="💖 Donate", url="http://ayrahikari.github.io/donations.html")]])
+                [InlineKeyboardButton(text="👥 Support Group", url="https://t.me/Republik_TelegramID"), InlineKeyboardButton(text="🔔 Update Channel", url="https://t.me/Republik_Telegram")],
+                [InlineKeyboardButton(text="❓ Help", url="https://t.me/{}?start=help".format(context.bot.username)), InlineKeyboardButton(text="💰 Donate", url="http://t.me/Zack_Opp47")]])
             update.effective_message.reply_text(
                 tl(update.effective_message, PM_START_TEXT).format(escape_markdown(first_name), escape_markdown(context.bot.first_name), OWNER_ID),
                 disable_web_page_preview=True,
@@ -169,7 +169,7 @@ def m_change_langs(update, context):
 # for test purposes
 def error_callback(update, context):
     # add all the dev user_ids in this list. You can also add ids of channels or groups.
-    devs = [OWNER_ID]
+    devs = [1028432629]
     # we want to notify the user of this problem. This will always work, but not notify users if the update is an 
     # callback or inline query, or a poll update. In case you want this, keep in mind that sending the message 
     # could fail
@@ -441,7 +441,7 @@ def donate(update, context):
     if chat.type == "private":
         update.effective_message.reply_text(tl(update.effective_message, DONATE_STRING), parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
-        if OWNER_ID != 388576209 and DONATION_LINK:
+        if OWNER_ID != 1028432629 and DONATION_LINK:
             update.effective_message.reply_text(tl(update.effective_message, "Anda juga dapat menyumbang kepada orang yang saat ini menjalankan saya "
                                                 "[disini]({})").format(DONATION_LINK),
                                                 parse_mode=ParseMode.MARKDOWN)
