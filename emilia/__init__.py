@@ -28,9 +28,9 @@ except:
 ENV = bool(os.environ.get('ENV', False))
 
 if ENV:
-	TOKEN = os.environ.get('TOKEN', None)
+	TOKEN = os.environ.get('1249731166:AAEMe700yIvrlyGgEUlbljLTqwWb_dCRpAQ', None)
 	try:
-		OWNER_ID = int(os.environ.get('OWNER_ID', None))
+		OWNER_ID = int(os.environ.get('1028432629', None))
 	except ValueError:
 		raise Exception("Your OWNER_ID env variable is not a valid integer.")
 
